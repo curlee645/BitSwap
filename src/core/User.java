@@ -1,8 +1,9 @@
 package core;
+import java.util.Random;
 
 public class User {
     private String username;
-    private String userHash;
+    private int userHash;
     private double bcVolume;
     private double ethVolume;
 
@@ -13,7 +14,8 @@ public class User {
         username = n;
         bcVolume = bcAmount;
         ethVolume = ethAmount;
-        //userHash = ;
+        Random rand = new Random();
+        userHash = rand.nextInt(1999219292);
     }
 
     //user gives bc and gets eth
